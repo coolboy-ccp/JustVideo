@@ -13,6 +13,9 @@
 		00CAB8FC2182F05E00201BA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00CAB8FB2182F05E00201BA3 /* Assets.xcassets */; };
 		00CAB8FF2182F05E00201BA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CAB8FD2182F05E00201BA3 /* LaunchScreen.storyboard */; };
 		00CAB9022182F05E00201BA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CAB9012182F05E00201BA3 /* main.m */; };
+		00CAB90C2182F0D600201BA3 /* VideoToolBoxEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CAB90B2182F0D600201BA3 /* VideoToolBoxEncode.m */; };
+		00CAB9102183031700201BA3 /* VideoToolBoxFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CAB90F2183031700201BA3 /* VideoToolBoxFileManager.m */; };
+		00DFBFF62186A68000F1D618 /* VideoToolBoxDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DFBFF52186A68000F1D618 /* VideoToolBoxDecode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		00CAB8FE2182F05E00201BA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		00CAB9002182F05E00201BA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00CAB9012182F05E00201BA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		00CAB90A2182F0D600201BA3 /* VideoToolBoxEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoToolBoxEncode.h; sourceTree = "<group>"; };
+		00CAB90B2182F0D600201BA3 /* VideoToolBoxEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoToolBoxEncode.m; sourceTree = "<group>"; };
+		00CAB90E2183031700201BA3 /* VideoToolBoxFileManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoToolBoxFileManager.h; sourceTree = "<group>"; };
+		00CAB90F2183031700201BA3 /* VideoToolBoxFileManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoToolBoxFileManager.m; sourceTree = "<group>"; };
+		00DFBFF42186A68000F1D618 /* VideoToolBoxDecode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoToolBoxDecode.h; sourceTree = "<group>"; };
+		00DFBFF52186A68000F1D618 /* VideoToolBoxDecode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoToolBoxDecode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,7 @@
 		00CAB8F12182F05D00201BA3 /* JustVideo */ = {
 			isa = PBXGroup;
 			children = (
+				00CAB90D218302EF00201BA3 /* VideoToolBox */,
 				00CAB8F22182F05D00201BA3 /* AppDelegate.h */,
 				00CAB8F32182F05D00201BA3 /* AppDelegate.m */,
 				00CAB8F52182F05D00201BA3 /* ViewController.h */,
@@ -69,6 +79,19 @@
 				00CAB9012182F05E00201BA3 /* main.m */,
 			);
 			path = JustVideo;
+			sourceTree = "<group>";
+		};
+		00CAB90D218302EF00201BA3 /* VideoToolBox */ = {
+			isa = PBXGroup;
+			children = (
+				00CAB90A2182F0D600201BA3 /* VideoToolBoxEncode.h */,
+				00CAB90B2182F0D600201BA3 /* VideoToolBoxEncode.m */,
+				00DFBFF42186A68000F1D618 /* VideoToolBoxDecode.h */,
+				00DFBFF52186A68000F1D618 /* VideoToolBoxDecode.m */,
+				00CAB90E2183031700201BA3 /* VideoToolBoxFileManager.h */,
+				00CAB90F2183031700201BA3 /* VideoToolBoxFileManager.m */,
+			);
+			path = VideoToolBox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +167,9 @@
 				00CAB8F72182F05D00201BA3 /* ViewController.m in Sources */,
 				00CAB9022182F05E00201BA3 /* main.m in Sources */,
 				00CAB8F42182F05D00201BA3 /* AppDelegate.m in Sources */,
+				00DFBFF62186A68000F1D618 /* VideoToolBoxDecode.m in Sources */,
+				00CAB9102183031700201BA3 /* VideoToolBoxFileManager.m in Sources */,
+				00CAB90C2182F0D600201BA3 /* VideoToolBoxEncode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
