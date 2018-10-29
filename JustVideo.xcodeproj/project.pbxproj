@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00B060CB2186FDAD0073C398 /* VideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B060CA2186FDAD0073C398 /* VideoCapture.m */; };
 		00CAB8F42182F05D00201BA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CAB8F32182F05D00201BA3 /* AppDelegate.m */; };
 		00CAB8F72182F05D00201BA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CAB8F62182F05D00201BA3 /* ViewController.m */; };
 		00CAB8FA2182F05D00201BA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CAB8F82182F05D00201BA3 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00B060C92186FDAD0073C398 /* VideoCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCapture.h; sourceTree = "<group>"; };
+		00B060CA2186FDAD0073C398 /* VideoCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCapture.m; sourceTree = "<group>"; };
 		00CAB8EF2182F05D00201BA3 /* JustVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CAB8F22182F05D00201BA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		00CAB8F32182F05D00201BA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -90,6 +93,8 @@
 				00DFBFF52186A68000F1D618 /* VideoToolBoxDecode.m */,
 				00CAB90E2183031700201BA3 /* VideoToolBoxFileManager.h */,
 				00CAB90F2183031700201BA3 /* VideoToolBoxFileManager.m */,
+				00B060C92186FDAD0073C398 /* VideoCapture.h */,
+				00B060CA2186FDAD0073C398 /* VideoCapture.m */,
 			);
 			path = VideoToolBox;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				00CAB9022182F05E00201BA3 /* main.m in Sources */,
 				00CAB8F42182F05D00201BA3 /* AppDelegate.m in Sources */,
 				00DFBFF62186A68000F1D618 /* VideoToolBoxDecode.m in Sources */,
+				00B060CB2186FDAD0073C398 /* VideoCapture.m in Sources */,
 				00CAB9102183031700201BA3 /* VideoToolBoxFileManager.m in Sources */,
 				00CAB90C2182F0D600201BA3 /* VideoToolBoxEncode.m in Sources */,
 			);
@@ -314,6 +320,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ND2NE475A9;
 				INFOPLIST_FILE = JustVideo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -331,6 +338,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ND2NE475A9;
 				INFOPLIST_FILE = JustVideo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
