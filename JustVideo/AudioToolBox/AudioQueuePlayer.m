@@ -1,17 +1,18 @@
 //
-//  AudioToolBoxDecode.m
+//  AudioQueuePlayer.m
 //  JustVideo
 //
-//  Created by 储诚鹏 on 2018/10/30.
+//  Created by 储诚鹏 on 2018/10/31.
 //  Copyright © 2018 储诚鹏. All rights reserved.
 //
 
-#import "AudioToolBoxDecode.h"
+#import "AudioQueuePlayer.h"
+#import <AudioToolbox/AudioToolbox.h>
 
 const uint32_t buffer_count = 3;
 const uint32_t buffer_size = 0x10000;
 
-@implementation AudioToolBoxDecode
+@implementation AudioQueuePlayer
 {
     AudioFileID audioFieldId; // An opaque data type that represents an audio file object.
     // An audio data format specification for a stream of audio
@@ -53,7 +54,7 @@ const uint32_t buffer_size = 0x10000;
 
 void bufferReady(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef buffer) {
     NSLog(@"refresh buffer");
-    AudioToolBoxDecode *decoder = (__bridge AudioToolBoxDecode *)inUserData;
+    AudioQueuePlayer *decoder = (__bridge AudioQueuePlayer *)inUserData;
     if (!decoder) {
         NSLog(@"nil decoder");
         return;
@@ -102,6 +103,25 @@ void bufferReady(void *inUserData, AudioQueueRef inAQ, AudioQueueBufferRef buffe
             break;
         }
     }
+}
+
+- (double)getCurrentTime {
+    Float64 timeInterval = 0;
+    if (audioQueue) {
+        AudioQueueTimelineRef timeLine;
+        AudioTimeStamp timeStamp;
+        OSStatus status = AudioQueueCreateTimeline(audioQueue, &timeLine);
+        if (status == noErr) {
+            AudioQueueGetCurrentTime(audioQueue, timeLine, &timeStamp, NULL);
+            timeInterval = timeStamp.mSampleTime * 1000000 / basicDescription.mSampleRate;
+        }
+    }
+    return timeInterval;
+}
+
+- (void)play {
+    AudioQueueSetParameter(audioQueue, kAudioQueueParam_Volume, 1.0);
+    AudioQueueStart(audioQueue, NULL);
 }
 
 @end

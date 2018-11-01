@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AudioUnitRecordAndPlay.H"
 
 @interface ViewController ()
 

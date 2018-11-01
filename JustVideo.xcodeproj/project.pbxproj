@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		008F2C5A21883B0000BD4E65 /* AudioToolBoxDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 008F2C5921883B0000BD4E65 /* AudioToolBoxDecode.m */; };
 		00B060CB2186FDAD0073C398 /* VideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B060CA2186FDAD0073C398 /* VideoCapture.m */; };
-		00B060CF21870DDA0073C398 /* AudioToolBoxEncode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B060CE21870DDA0073C398 /* AudioToolBoxEncode.m */; };
+		00C5482F2189526000D34541 /* AudioQueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5482E2189526000D34541 /* AudioQueuePlayer.m */; };
+		00C54832218952BE00D34541 /* AudioToolBoxAACEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C54831218952BE00D34541 /* AudioToolBoxAACEncoder.m */; };
+		00C548382189541200D34541 /* AudioUnitRecordAndPlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C548372189541200D34541 /* AudioUnitRecordAndPlay.m */; };
 		00CAB8F42182F05D00201BA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CAB8F32182F05D00201BA3 /* AppDelegate.m */; };
 		00CAB8F72182F05D00201BA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CAB8F62182F05D00201BA3 /* ViewController.m */; };
 		00CAB8FA2182F05D00201BA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00CAB8F82182F05D00201BA3 /* Main.storyboard */; };
@@ -22,12 +23,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		008F2C5821883B0000BD4E65 /* AudioToolBoxDecode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioToolBoxDecode.h; sourceTree = "<group>"; };
-		008F2C5921883B0000BD4E65 /* AudioToolBoxDecode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioToolBoxDecode.m; sourceTree = "<group>"; };
 		00B060C92186FDAD0073C398 /* VideoCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCapture.h; sourceTree = "<group>"; };
 		00B060CA2186FDAD0073C398 /* VideoCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCapture.m; sourceTree = "<group>"; };
-		00B060CD21870DDA0073C398 /* AudioToolBoxEncode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioToolBoxEncode.h; sourceTree = "<group>"; };
-		00B060CE21870DDA0073C398 /* AudioToolBoxEncode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioToolBoxEncode.m; sourceTree = "<group>"; };
+		00C5482D2189526000D34541 /* AudioQueuePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueuePlayer.h; sourceTree = "<group>"; };
+		00C5482E2189526000D34541 /* AudioQueuePlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioQueuePlayer.m; sourceTree = "<group>"; };
+		00C54830218952BE00D34541 /* AudioToolBoxAACEncoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioToolBoxAACEncoder.h; sourceTree = "<group>"; };
+		00C54831218952BE00D34541 /* AudioToolBoxAACEncoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioToolBoxAACEncoder.m; sourceTree = "<group>"; };
+		00C548362189541200D34541 /* AudioUnitRecordAndPlay.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitRecordAndPlay.h; sourceTree = "<group>"; };
+		00C548372189541200D34541 /* AudioUnitRecordAndPlay.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitRecordAndPlay.m; sourceTree = "<group>"; };
 		00CAB8EF2182F05D00201BA3 /* JustVideo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustVideo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00CAB8F22182F05D00201BA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		00CAB8F32182F05D00201BA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -60,10 +63,12 @@
 		00B060CC21870DB60073C398 /* AudioToolBox */ = {
 			isa = PBXGroup;
 			children = (
-				00B060CD21870DDA0073C398 /* AudioToolBoxEncode.h */,
-				00B060CE21870DDA0073C398 /* AudioToolBoxEncode.m */,
-				008F2C5821883B0000BD4E65 /* AudioToolBoxDecode.h */,
-				008F2C5921883B0000BD4E65 /* AudioToolBoxDecode.m */,
+				00C5482D2189526000D34541 /* AudioQueuePlayer.h */,
+				00C5482E2189526000D34541 /* AudioQueuePlayer.m */,
+				00C54830218952BE00D34541 /* AudioToolBoxAACEncoder.h */,
+				00C54831218952BE00D34541 /* AudioToolBoxAACEncoder.m */,
+				00C548362189541200D34541 /* AudioUnitRecordAndPlay.h */,
+				00C548372189541200D34541 /* AudioUnitRecordAndPlay.m */,
 			);
 			path = AudioToolBox;
 			sourceTree = "<group>";
@@ -188,14 +193,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				00CAB8F72182F05D00201BA3 /* ViewController.m in Sources */,
+				00C548382189541200D34541 /* AudioUnitRecordAndPlay.m in Sources */,
 				00CAB9022182F05E00201BA3 /* main.m in Sources */,
 				00CAB8F42182F05D00201BA3 /* AppDelegate.m in Sources */,
 				00DFBFF62186A68000F1D618 /* VideoToolBoxDecode.m in Sources */,
 				00B060CB2186FDAD0073C398 /* VideoCapture.m in Sources */,
-				008F2C5A21883B0000BD4E65 /* AudioToolBoxDecode.m in Sources */,
 				00CAB9102183031700201BA3 /* VideoToolBoxFileManager.m in Sources */,
-				00B060CF21870DDA0073C398 /* AudioToolBoxEncode.m in Sources */,
+				00C5482F2189526000D34541 /* AudioQueuePlayer.m in Sources */,
 				00CAB90C2182F0D600201BA3 /* VideoToolBoxEncode.m in Sources */,
+				00C54832218952BE00D34541 /* AudioToolBoxAACEncoder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,15 +1,16 @@
 //
-//  AudioToolBoxEncode.m
+//  AudioToolBoxAACEncoder.m
 //  JustVideo
 //
-//  Created by 储诚鹏 on 2018/10/29.
+//  Created by 储诚鹏 on 2018/10/31.
 //  Copyright © 2018 储诚鹏. All rights reserved.
 //
 
-#import "AudioToolBoxEncode.h"
+#import "AudioToolBoxAACEncoder.h"
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
-@implementation AudioToolBoxEncode
+@implementation AudioToolBoxAACEncoder
 {
     AudioConverterRef audioConverter;
     uint8_t *accBuffer;
@@ -154,7 +155,7 @@
  */
 OSStatus inInputDataProc(AudioConverterRef inAudioConverter, UInt32 *ioNumberDataPackets, AudioBufferList *ioData, AudioStreamPacketDescription **outDataPacketDescription, void *inUserData)
 {
-    AudioToolBoxEncode *encoder = (__bridge AudioToolBoxEncode *)(inUserData);
+    AudioToolBoxAACEncoder *encoder = (__bridge AudioToolBoxAACEncoder *)(inUserData);
     UInt32 requestedPackets = *ioNumberDataPackets;
     
     size_t copiedSamples = [encoder copyPCMSamplesIntoBuffer:ioData];
@@ -212,5 +213,4 @@ OSStatus inInputDataProc(AudioConverterRef inAudioConverter, UInt32 *ioNumberDat
     NSData *data = [NSData dataWithBytesNoCopy:packet length:adtsLength freeWhenDone:YES];
     return data;
 }
-
 @end
