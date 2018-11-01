@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init NS_UNAVAILABLE;
 - (instancetype)initWithURL:(NSString *)url;
 - (void)start;
-- (void)end;
+- (void)stop;
 @end
 
 NS_ASSUME_NONNULL_END

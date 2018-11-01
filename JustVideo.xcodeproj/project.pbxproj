@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0078A5B6218A97EB0011504A /* AudioUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0078A5B5218A97EB0011504A /* AudioUnitConverter.m */; };
+		0078A5B9218AAF5B0011504A /* AudioUnitPlayPCM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0078A5B8218AAF5B0011504A /* AudioUnitPlayPCM.m */; };
 		00B060CB2186FDAD0073C398 /* VideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B060CA2186FDAD0073C398 /* VideoCapture.m */; };
 		00C5482F2189526000D34541 /* AudioQueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5482E2189526000D34541 /* AudioQueuePlayer.m */; };
 		00C54832218952BE00D34541 /* AudioToolBoxAACEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C54831218952BE00D34541 /* AudioToolBoxAACEncoder.m */; };
@@ -23,6 +25,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0078A5B4218A97EB0011504A /* AudioUnitConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitConverter.h; sourceTree = "<group>"; };
+		0078A5B5218A97EB0011504A /* AudioUnitConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitConverter.m; sourceTree = "<group>"; };
+		0078A5B7218AAF5B0011504A /* AudioUnitPlayPCM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitPlayPCM.h; sourceTree = "<group>"; };
+		0078A5B8218AAF5B0011504A /* AudioUnitPlayPCM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitPlayPCM.m; sourceTree = "<group>"; };
 		00B060C92186FDAD0073C398 /* VideoCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCapture.h; sourceTree = "<group>"; };
 		00B060CA2186FDAD0073C398 /* VideoCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCapture.m; sourceTree = "<group>"; };
 		00C5482D2189526000D34541 /* AudioQueuePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueuePlayer.h; sourceTree = "<group>"; };
@@ -69,6 +75,10 @@
 				00C54831218952BE00D34541 /* AudioToolBoxAACEncoder.m */,
 				00C548362189541200D34541 /* AudioUnitRecordAndPlay.h */,
 				00C548372189541200D34541 /* AudioUnitRecordAndPlay.m */,
+				0078A5B4218A97EB0011504A /* AudioUnitConverter.h */,
+				0078A5B5218A97EB0011504A /* AudioUnitConverter.m */,
+				0078A5B7218AAF5B0011504A /* AudioUnitPlayPCM.h */,
+				0078A5B8218AAF5B0011504A /* AudioUnitPlayPCM.m */,
 			);
 			path = AudioToolBox;
 			sourceTree = "<group>";
@@ -197,8 +207,10 @@
 				00CAB9022182F05E00201BA3 /* main.m in Sources */,
 				00CAB8F42182F05D00201BA3 /* AppDelegate.m in Sources */,
 				00DFBFF62186A68000F1D618 /* VideoToolBoxDecode.m in Sources */,
+				0078A5B9218AAF5B0011504A /* AudioUnitPlayPCM.m in Sources */,
 				00B060CB2186FDAD0073C398 /* VideoCapture.m in Sources */,
 				00CAB9102183031700201BA3 /* VideoToolBoxFileManager.m in Sources */,
+				0078A5B6218A97EB0011504A /* AudioUnitConverter.m in Sources */,
 				00C5482F2189526000D34541 /* AudioQueuePlayer.m in Sources */,
 				00CAB90C2182F0D600201BA3 /* VideoToolBoxEncode.m in Sources */,
 				00C54832218952BE00D34541 /* AudioToolBoxAACEncoder.m in Sources */,
