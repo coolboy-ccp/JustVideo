@@ -7,9 +7,12 @@
 //
 
 #import "ViewController.h"
-#import "AudioUnitRecordAndPlay.H"
+#import "AudioToolBox/AudioUnitAUGraph.h"
 
 @interface ViewController ()
+{
+    AudioUnitAUGraph *au;
+}
 
 @end
 
@@ -17,7 +20,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    au = [AudioUnitAUGraph defaultAU];
+}
+
+- (IBAction)augraphPlay:(UIButton *)sender {
+    sender.selected = !sender.selected;
+    if (sender.selected) {
+         [au start];
+    }
+    else {
+        [au stop];
+    }
 }
 
 

@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		006FE077218C42CB002044E6 /* test.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 006FE076218C42CB002044E6 /* test.pcm */; };
 		0078A5B6218A97EB0011504A /* AudioUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0078A5B5218A97EB0011504A /* AudioUnitConverter.m */; };
 		0078A5B9218AAF5B0011504A /* AudioUnitPlayPCM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0078A5B8218AAF5B0011504A /* AudioUnitPlayPCM.m */; };
+		0079A833218BEE2C0008DC40 /* AudioUnitAUGraph.m in Sources */ = {isa = PBXBuildFile; fileRef = 0079A832218BEE2C0008DC40 /* AudioUnitAUGraph.m */; };
 		00B060CB2186FDAD0073C398 /* VideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B060CA2186FDAD0073C398 /* VideoCapture.m */; };
 		00C5482F2189526000D34541 /* AudioQueuePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C5482E2189526000D34541 /* AudioQueuePlayer.m */; };
 		00C54832218952BE00D34541 /* AudioToolBoxAACEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C54831218952BE00D34541 /* AudioToolBoxAACEncoder.m */; };
@@ -25,10 +27,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		006FE076218C42CB002044E6 /* test.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.pcm; sourceTree = "<group>"; };
 		0078A5B4218A97EB0011504A /* AudioUnitConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitConverter.h; sourceTree = "<group>"; };
 		0078A5B5218A97EB0011504A /* AudioUnitConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitConverter.m; sourceTree = "<group>"; };
 		0078A5B7218AAF5B0011504A /* AudioUnitPlayPCM.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitPlayPCM.h; sourceTree = "<group>"; };
 		0078A5B8218AAF5B0011504A /* AudioUnitPlayPCM.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitPlayPCM.m; sourceTree = "<group>"; };
+		0079A831218BEE2C0008DC40 /* AudioUnitAUGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitAUGraph.h; sourceTree = "<group>"; };
+		0079A832218BEE2C0008DC40 /* AudioUnitAUGraph.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitAUGraph.m; sourceTree = "<group>"; };
 		00B060C92186FDAD0073C398 /* VideoCapture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCapture.h; sourceTree = "<group>"; };
 		00B060CA2186FDAD0073C398 /* VideoCapture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCapture.m; sourceTree = "<group>"; };
 		00C5482D2189526000D34541 /* AudioQueuePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioQueuePlayer.h; sourceTree = "<group>"; };
@@ -66,6 +71,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		006FE072218C3F46002044E6 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				006FE076218C42CB002044E6 /* test.pcm */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
 		00B060CC21870DB60073C398 /* AudioToolBox */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +92,8 @@
 				0078A5B5218A97EB0011504A /* AudioUnitConverter.m */,
 				0078A5B7218AAF5B0011504A /* AudioUnitPlayPCM.h */,
 				0078A5B8218AAF5B0011504A /* AudioUnitPlayPCM.m */,
+				0079A831218BEE2C0008DC40 /* AudioUnitAUGraph.h */,
+				0079A832218BEE2C0008DC40 /* AudioUnitAUGraph.m */,
 			);
 			path = AudioToolBox;
 			sourceTree = "<group>";
@@ -102,6 +117,7 @@
 		00CAB8F12182F05D00201BA3 /* JustVideo */ = {
 			isa = PBXGroup;
 			children = (
+				006FE072218C3F46002044E6 /* Sources */,
 				00B060CC21870DB60073C398 /* AudioToolBox */,
 				00CAB90D218302EF00201BA3 /* VideoToolBox */,
 				00CAB8F22182F05D00201BA3 /* AppDelegate.h */,
@@ -191,6 +207,7 @@
 			files = (
 				00CAB8FF2182F05E00201BA3 /* LaunchScreen.storyboard in Resources */,
 				00CAB8FC2182F05E00201BA3 /* Assets.xcassets in Resources */,
+				006FE077218C42CB002044E6 /* test.pcm in Resources */,
 				00CAB8FA2182F05D00201BA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,6 +231,7 @@
 				00C5482F2189526000D34541 /* AudioQueuePlayer.m in Sources */,
 				00CAB90C2182F0D600201BA3 /* VideoToolBoxEncode.m in Sources */,
 				00C54832218952BE00D34541 /* AudioToolBoxAACEncoder.m in Sources */,
+				0079A833218BEE2C0008DC40 /* AudioUnitAUGraph.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
