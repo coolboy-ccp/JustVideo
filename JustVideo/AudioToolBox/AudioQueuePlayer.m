@@ -9,8 +9,8 @@
 #import "AudioQueuePlayer.h"
 #import <AudioToolbox/AudioToolbox.h>
 
-const uint32_t buffer_count = 3;
-const uint32_t buffer_size = 0x10000;
+static const uint32_t buffer_count = 3;
+static const uint32_t buffer_size = 0x10000;
 
 @implementation AudioQueuePlayer
 {

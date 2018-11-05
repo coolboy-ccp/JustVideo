@@ -7,15 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseAudioPlayer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AudioUnitAUGraph : NSObject
-- (instancetype)init NS_UNAVAILABLE;
-+ (instancetype)defaultAU;
-- (instancetype)initWithUrl:(NSURL *)url;
-- (void)start;
-- (void)stop;
+@interface AudioUnitAUGraph :BaseAudioPlayer
+
 @end
 
 NS_ASSUME_NONNULL_END

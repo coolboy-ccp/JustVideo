@@ -7,11 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "AudioToolBox/BaseAudioPlayer.h"
 #import "AudioToolBox/AudioUnitAUGraph.h"
+#import "AudioToolBox/AudioUnitPlayPCM.h"
 
 @interface ViewController ()
 {
-    AudioUnitAUGraph *au;
+    NSArray <BaseAudioPlayer *>*players;
+    IBOutletCollection(UIButton) NSArray *playBtns;
 }
 
 @end
@@ -20,18 +23,32 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    au = [AudioUnitAUGraph defaultAU];
+    players = @[[AudioUnitAUGraph defaultPlayer], [AudioUnitPlayPCM defaultPlayer]];
 }
 
-- (IBAction)augraphPlay:(UIButton *)sender {
+- (IBAction)play:(UIButton *)sender {
+    [self resetPlayers:sender];
+    NSInteger idx = sender.tag - 101;
+    BaseAudioPlayer *player = players[idx];
     sender.selected = !sender.selected;
     if (sender.selected) {
-         [au start];
+        [player start];
     }
     else {
-        [au stop];
+        [player stop];
     }
 }
 
+- (void)resetPlayers:(UIButton *)current {
+    for (int i = 0; i < players.count; i ++) {
+        UIButton *btn = playBtns[i];
+        if (btn == current) {
+            continue;
+        }
+        BaseAudioPlayer *player = players[i];
+        [player stop];
+        btn.selected = false;
+    }
+}
 
 @end

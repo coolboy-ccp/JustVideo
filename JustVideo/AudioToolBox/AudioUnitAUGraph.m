@@ -7,8 +7,6 @@
 //
 
 #import "AudioUnitAUGraph.h"
-#import <AVFoundation/AVFoundation.h>
-#import <AudioUnit/AudioUnit.h>
 
 #define REMOTE_IO_INPUT_BUS 1
 #define REMOTE_IO_OUTPUT_BUS 0
@@ -29,21 +27,6 @@
     Byte *buffer;
     AUGraph augraph;
     AudioStreamBasicDescription audioFormat;
-    NSURL *fileURL;
-}
-
-+ (instancetype)defaultAU {
-    NSURL *url = [[NSBundle mainBundle] URLForResource:@"test" withExtension:@"pcm"];
-    return [[AudioUnitAUGraph alloc] initWithUrl:url];
-}
-
-- (instancetype)initWithUrl:(NSURL *)url
-{
-    self = [super init];
-    if (self) {
-        fileURL = url;
-    }
-    return self;
 }
 
 - (void)start {
@@ -51,22 +34,23 @@
 }
 
 - (void)stop {
-    keepNoError(AUGraphStop(augraph));
-    keepNoError(AUGraphUninitialize(augraph));
-    if (bufferList != NULL) {
-        if (bufferList->mBuffers[0].mData) {
-            free(bufferList->mBuffers[0].mData);
-            bufferList->mBuffers[0].mData = NULL;
+    if (AUGraphStop(augraph) == noErr) {
+        keepNoError(AUGraphUninitialize(augraph));
+        if (bufferList != NULL) {
+            if (bufferList->mBuffers[0].mData) {
+                free(bufferList->mBuffers[0].mData);
+                bufferList->mBuffers[0].mData = NULL;
+            }
+            free(bufferList);
+            bufferList = NULL;
         }
-        free(bufferList);
-        bufferList = NULL;
-    }
-    [inputStream close];
-    keepNoError(DisposeAUGraph(augraph));
+        [inputStream close];
+        keepNoError(DisposeAUGraph(augraph));
+    }   
 }
 
 void keepNoError(OSStatus status) {
-    NSLog(@"%d", status);
+    NSLog(@"%d", (int)status);
     assert(status == noErr);
 }
 
@@ -145,7 +129,7 @@ void keepNoError(OSStatus status) {
 }
 
 - (void)openFile {
-    inputStream = [NSInputStream inputStreamWithURL:fileURL];
+    inputStream = [NSInputStream inputStreamWithURL:self.fileURL];
     assert(inputStream);
     [inputStream open];
 }

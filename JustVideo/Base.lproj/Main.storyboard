@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaH-Iy-XLV">
+                            <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaH-Iy-XLV">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.86666666670000003" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -30,17 +30,36 @@
                                 <state key="normal" title="Augraph play"/>
                                 <state key="selected" title="Augraph stop"/>
                                 <connections>
-                                    <action selector="augraphPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SPF-d9-9vR"/>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghY-qM-tsk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pT3-db-Y0q">
+                                <rect key="frame" x="0.0" y="65" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="w5u-5A-228"/>
+                                </constraints>
+                                <state key="normal" title="PlayPCM play"/>
+                                <state key="selected" title="PlayPCM stop"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z08-IH-rgw"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="EaH-Iy-XLV" secondAttribute="trailing" id="26H-mi-SeU"/>
+                            <constraint firstItem="pT3-db-Y0q" firstAttribute="top" secondItem="EaH-Iy-XLV" secondAttribute="bottom" constant="1" id="Zfn-mt-VF3"/>
+                            <constraint firstAttribute="trailing" secondItem="pT3-db-Y0q" secondAttribute="trailing" id="ceY-uo-v8S"/>
                             <constraint firstItem="EaH-Iy-XLV" firstAttribute="top" secondItem="pGj-hp-iSR" secondAttribute="bottom" id="foi-RN-udN"/>
                             <constraint firstItem="EaH-Iy-XLV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gnV-vQ-lRP"/>
+                            <constraint firstItem="pT3-db-Y0q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zbX-Gi-HnH"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="playBtns" destination="EaH-Iy-XLV" id="BTX-EO-lTS"/>
+                        <outletCollection property="playBtns" destination="pT3-db-Y0q" id="RmJ-dd-k8R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

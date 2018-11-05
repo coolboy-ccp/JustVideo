@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseAudioPlayer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface AudioUnitPlayPCM : NSObject
+@interface AudioUnitPlayPCM : BaseAudioPlayer
 
 @end
 
