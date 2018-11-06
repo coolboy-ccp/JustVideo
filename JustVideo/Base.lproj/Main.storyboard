@@ -76,9 +76,21 @@
                                     <constraint firstAttribute="height" constant="44" id="faQ-mc-sml"/>
                                 </constraints>
                                 <state key="normal" title="Converter play(aac)"/>
-                                <state key="selected" title="Converter stop(mp3)"/>
+                                <state key="selected" title="Converter stop(aac)"/>
                                 <connections>
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AL7-uu-2L7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GN8-Nb-v65">
+                                <rect key="frame" x="0.0" y="245" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="bsa-30-G4f"/>
+                                </constraints>
+                                <state key="normal" title="EXTConverter play(mp3)"/>
+                                <state key="selected" title="EXTConverter stop(mp3)"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gso-AS-GMt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -95,8 +107,11 @@
                             <constraint firstItem="6Qi-cP-8uH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gbN-OF-kDw"/>
                             <constraint firstItem="69g-dw-yn5" firstAttribute="top" secondItem="6Qi-cP-8uH" secondAttribute="bottom" constant="1" id="gm8-lh-HOm"/>
                             <constraint firstItem="EaH-Iy-XLV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gnV-vQ-lRP"/>
+                            <constraint firstAttribute="trailing" secondItem="GN8-Nb-v65" secondAttribute="trailing" id="hhz-ba-X2x"/>
+                            <constraint firstItem="GN8-Nb-v65" firstAttribute="top" secondItem="69g-dw-yn5" secondAttribute="bottom" constant="1" id="mU8-He-4Ro"/>
                             <constraint firstItem="69g-dw-yn5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="olX-Hf-UpW"/>
                             <constraint firstAttribute="trailing" secondItem="J9U-vM-dqM" secondAttribute="trailing" id="pSq-fU-5nI"/>
+                            <constraint firstItem="GN8-Nb-v65" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sRe-tK-to1"/>
                             <constraint firstItem="6Qi-cP-8uH" firstAttribute="top" secondItem="J9U-vM-dqM" secondAttribute="bottom" constant="1" id="vca-9O-Vxj"/>
                             <constraint firstItem="pT3-db-Y0q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zbX-Gi-HnH"/>
                         </constraints>
@@ -107,6 +122,7 @@
                         <outletCollection property="playBtns" destination="J9U-vM-dqM" id="gUp-XD-bvF"/>
                         <outletCollection property="playBtns" destination="6Qi-cP-8uH" id="PTn-An-Xch"/>
                         <outletCollection property="playBtns" destination="69g-dw-yn5" id="GXb-1k-Hue"/>
+                        <outletCollection property="playBtns" destination="GN8-Nb-v65" id="ZiV-fH-CL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

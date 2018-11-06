@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00029F4B21914A16004294E2 /* AudioUnitEXTConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00029F4A21914A16004294E2 /* AudioUnitEXTConverter.m */; };
 		006FE077218C42CB002044E6 /* test.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 006FE076218C42CB002044E6 /* test.pcm */; };
 		0078A5B6218A97EB0011504A /* AudioUnitConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0078A5B5218A97EB0011504A /* AudioUnitConverter.m */; };
 		0078A5B9218AAF5B0011504A /* AudioUnitPlayPCM.m in Sources */ = {isa = PBXBuildFile; fileRef = 0078A5B8218AAF5B0011504A /* AudioUnitPlayPCM.m */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00029F4921914A16004294E2 /* AudioUnitEXTConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitEXTConverter.h; sourceTree = "<group>"; };
+		00029F4A21914A16004294E2 /* AudioUnitEXTConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitEXTConverter.m; sourceTree = "<group>"; };
 		006FE076218C42CB002044E6 /* test.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.pcm; sourceTree = "<group>"; };
 		0078A5B4218A97EB0011504A /* AudioUnitConverter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioUnitConverter.h; sourceTree = "<group>"; };
 		0078A5B5218A97EB0011504A /* AudioUnitConverter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AudioUnitConverter.m; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				00C548372189541200D34541 /* AudioUnitRecordAndPlay.m */,
 				0078A5B4218A97EB0011504A /* AudioUnitConverter.h */,
 				0078A5B5218A97EB0011504A /* AudioUnitConverter.m */,
+				00029F4921914A16004294E2 /* AudioUnitEXTConverter.h */,
+				00029F4A21914A16004294E2 /* AudioUnitEXTConverter.m */,
 				0078A5B7218AAF5B0011504A /* AudioUnitPlayPCM.h */,
 				0078A5B8218AAF5B0011504A /* AudioUnitPlayPCM.m */,
 				0079A831218BEE2C0008DC40 /* AudioUnitAUGraph.h */,
@@ -252,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00029F4B21914A16004294E2 /* AudioUnitEXTConverter.m in Sources */,
 				00E37584218FEEAA00ECA6FE /* BaseAudioPlayer.m in Sources */,
 				00CAB8F72182F05D00201BA3 /* ViewController.m in Sources */,
 				00C548382189541200D34541 /* AudioUnitRecordAndPlay.m in Sources */,
@@ -408,7 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND2NE475A9;
+				DEVELOPMENT_TEAM = V6QCEN324A;
 				INFOPLIST_FILE = JustVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -426,7 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ND2NE475A9;
+				DEVELOPMENT_TEAM = V6QCEN324A;
 				INFOPLIST_FILE = JustVideo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
