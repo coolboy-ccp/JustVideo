@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import <assert.h>
 #import "AudioToolBox/BaseAudioPlayer.h"
 #import "AudioToolBox/AudioUnitAUGraph.h"
 #import "AudioToolBox/AudioUnitPlayPCM.h"
+#import "AudioToolBox/AudioUnitConverter.h"
 
 @interface ViewController ()
 {
@@ -23,7 +25,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    players = @[[AudioUnitAUGraph defaultPlayer], [AudioUnitPlayPCM defaultPlayer]];
+    players = @[[AudioUnitAUGraph defaultPlayer], [AudioUnitPlayPCM defaultPlayer], [AudioUnitConverter mp3], [AudioUnitConverter m4a], [AudioUnitConverter aac]];
+    NSAssert(players.count == playBtns.count, @"功能按钮数组和功能类数组个数必须一样");
 }
 
 - (IBAction)play:(UIButton *)sender {

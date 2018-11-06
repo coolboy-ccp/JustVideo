@@ -25,6 +25,9 @@
 		00CAB9102183031700201BA3 /* VideoToolBoxFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 00CAB90F2183031700201BA3 /* VideoToolBoxFileManager.m */; };
 		00DFBFF62186A68000F1D618 /* VideoToolBoxDecode.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DFBFF52186A68000F1D618 /* VideoToolBoxDecode.m */; };
 		00E37584218FEEAA00ECA6FE /* BaseAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E37583218FEEAA00ECA6FE /* BaseAudioPlayer.m */; };
+		00E3758B2190374C00ECA6FE /* abc.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 00E375892190374C00ECA6FE /* abc.m4a */; };
+		00E3758C2190374C00ECA6FE /* abc.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 00E3758A2190374C00ECA6FE /* abc.mp3 */; };
+		00E375902190451500ECA6FE /* abc.aac in Resources */ = {isa = PBXBuildFile; fileRef = 00E3758F2190451500ECA6FE /* abc.aac */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +64,9 @@
 		00DFBFF52186A68000F1D618 /* VideoToolBoxDecode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoToolBoxDecode.m; sourceTree = "<group>"; };
 		00E37582218FEEAA00ECA6FE /* BaseAudioPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseAudioPlayer.h; sourceTree = "<group>"; };
 		00E37583218FEEAA00ECA6FE /* BaseAudioPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseAudioPlayer.m; sourceTree = "<group>"; };
+		00E375892190374C00ECA6FE /* abc.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = abc.m4a; sourceTree = "<group>"; };
+		00E3758A2190374C00ECA6FE /* abc.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = abc.mp3; sourceTree = "<group>"; };
+		00E3758F2190451500ECA6FE /* abc.aac */ = {isa = PBXFileReference; lastKnownFileType = file; path = abc.aac; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +163,9 @@
 		00E37585219024FA00ECA6FE /* Audios */ = {
 			isa = PBXGroup;
 			children = (
+				00E375892190374C00ECA6FE /* abc.m4a */,
+				00E3758A2190374C00ECA6FE /* abc.mp3 */,
+				00E3758F2190451500ECA6FE /* abc.aac */,
 				006FE076218C42CB002044E6 /* test.pcm */,
 			);
 			path = Audios;
@@ -228,6 +237,9 @@
 			files = (
 				00CAB8FF2182F05E00201BA3 /* LaunchScreen.storyboard in Resources */,
 				00CAB8FC2182F05E00201BA3 /* Assets.xcassets in Resources */,
+				00E375902190451500ECA6FE /* abc.aac in Resources */,
+				00E3758C2190374C00ECA6FE /* abc.mp3 in Resources */,
+				00E3758B2190374C00ECA6FE /* abc.m4a in Resources */,
 				006FE077218C42CB002044E6 /* test.pcm in Resources */,
 				00CAB8FA2182F05D00201BA3 /* Main.storyboard in Resources */,
 			);

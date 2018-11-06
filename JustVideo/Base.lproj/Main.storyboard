@@ -45,20 +45,68 @@
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z08-IH-rgw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9U-vM-dqM">
+                                <rect key="frame" x="0.0" y="110" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Pfa-zH-xfa"/>
+                                </constraints>
+                                <state key="normal" title="Converter play(mp3)"/>
+                                <state key="selected" title="Converter stop(mp3)"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MFT-cA-WL2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Qi-cP-8uH">
+                                <rect key="frame" x="0.0" y="155" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eTb-lT-EuN"/>
+                                </constraints>
+                                <state key="normal" title="Converter play(m4a)"/>
+                                <state key="selected" title="Converter stop(m4a)"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HWg-fz-KGw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69g-dw-yn5">
+                                <rect key="frame" x="0.0" y="200" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="faQ-mc-sml"/>
+                                </constraints>
+                                <state key="normal" title="Converter play(aac)"/>
+                                <state key="selected" title="Converter stop(mp3)"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AL7-uu-2L7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="EaH-Iy-XLV" secondAttribute="trailing" id="26H-mi-SeU"/>
+                            <constraint firstItem="J9U-vM-dqM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CIc-w8-AS4"/>
+                            <constraint firstAttribute="trailing" secondItem="69g-dw-yn5" secondAttribute="trailing" id="FQ6-BL-jrr"/>
+                            <constraint firstAttribute="trailing" secondItem="6Qi-cP-8uH" secondAttribute="trailing" id="FvL-wV-SLh"/>
+                            <constraint firstItem="J9U-vM-dqM" firstAttribute="top" secondItem="pT3-db-Y0q" secondAttribute="bottom" constant="1" id="GDJ-ut-DLF"/>
                             <constraint firstItem="pT3-db-Y0q" firstAttribute="top" secondItem="EaH-Iy-XLV" secondAttribute="bottom" constant="1" id="Zfn-mt-VF3"/>
                             <constraint firstAttribute="trailing" secondItem="pT3-db-Y0q" secondAttribute="trailing" id="ceY-uo-v8S"/>
                             <constraint firstItem="EaH-Iy-XLV" firstAttribute="top" secondItem="pGj-hp-iSR" secondAttribute="bottom" id="foi-RN-udN"/>
+                            <constraint firstItem="6Qi-cP-8uH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gbN-OF-kDw"/>
+                            <constraint firstItem="69g-dw-yn5" firstAttribute="top" secondItem="6Qi-cP-8uH" secondAttribute="bottom" constant="1" id="gm8-lh-HOm"/>
                             <constraint firstItem="EaH-Iy-XLV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gnV-vQ-lRP"/>
+                            <constraint firstItem="69g-dw-yn5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="olX-Hf-UpW"/>
+                            <constraint firstAttribute="trailing" secondItem="J9U-vM-dqM" secondAttribute="trailing" id="pSq-fU-5nI"/>
+                            <constraint firstItem="6Qi-cP-8uH" firstAttribute="top" secondItem="J9U-vM-dqM" secondAttribute="bottom" constant="1" id="vca-9O-Vxj"/>
                             <constraint firstItem="pT3-db-Y0q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zbX-Gi-HnH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outletCollection property="playBtns" destination="EaH-Iy-XLV" id="BTX-EO-lTS"/>
                         <outletCollection property="playBtns" destination="pT3-db-Y0q" id="RmJ-dd-k8R"/>
+                        <outletCollection property="playBtns" destination="J9U-vM-dqM" id="gUp-XD-bvF"/>
+                        <outletCollection property="playBtns" destination="6Qi-cP-8uH" id="PTn-An-Xch"/>
+                        <outletCollection property="playBtns" destination="69g-dw-yn5" id="GXb-1k-Hue"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
