@@ -93,6 +93,18 @@
                                     <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gso-AS-GMt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="107" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZe-Hu-ADe">
+                                <rect key="frame" x="0.0" y="290" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.27058823529999998" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Tdu-bp-SuW"/>
+                                </constraints>
+                                <state key="normal" title="AudioUseSampleBuffer play(mp3)"/>
+                                <state key="selected" title="AudioUseSampleBuffer stop(mp3)"/>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oH8-mR-kiH"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -101,6 +113,7 @@
                             <constraint firstAttribute="trailing" secondItem="69g-dw-yn5" secondAttribute="trailing" id="FQ6-BL-jrr"/>
                             <constraint firstAttribute="trailing" secondItem="6Qi-cP-8uH" secondAttribute="trailing" id="FvL-wV-SLh"/>
                             <constraint firstItem="J9U-vM-dqM" firstAttribute="top" secondItem="pT3-db-Y0q" secondAttribute="bottom" constant="1" id="GDJ-ut-DLF"/>
+                            <constraint firstItem="tZe-Hu-ADe" firstAttribute="top" secondItem="GN8-Nb-v65" secondAttribute="bottom" constant="1" id="NIG-HN-EGH"/>
                             <constraint firstItem="pT3-db-Y0q" firstAttribute="top" secondItem="EaH-Iy-XLV" secondAttribute="bottom" constant="1" id="Zfn-mt-VF3"/>
                             <constraint firstAttribute="trailing" secondItem="pT3-db-Y0q" secondAttribute="trailing" id="ceY-uo-v8S"/>
                             <constraint firstItem="EaH-Iy-XLV" firstAttribute="top" secondItem="pGj-hp-iSR" secondAttribute="bottom" id="foi-RN-udN"/>
@@ -108,11 +121,13 @@
                             <constraint firstItem="69g-dw-yn5" firstAttribute="top" secondItem="6Qi-cP-8uH" secondAttribute="bottom" constant="1" id="gm8-lh-HOm"/>
                             <constraint firstItem="EaH-Iy-XLV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gnV-vQ-lRP"/>
                             <constraint firstAttribute="trailing" secondItem="GN8-Nb-v65" secondAttribute="trailing" id="hhz-ba-X2x"/>
+                            <constraint firstAttribute="trailing" secondItem="tZe-Hu-ADe" secondAttribute="trailing" id="i31-0Z-HXh"/>
                             <constraint firstItem="GN8-Nb-v65" firstAttribute="top" secondItem="69g-dw-yn5" secondAttribute="bottom" constant="1" id="mU8-He-4Ro"/>
                             <constraint firstItem="69g-dw-yn5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="olX-Hf-UpW"/>
                             <constraint firstAttribute="trailing" secondItem="J9U-vM-dqM" secondAttribute="trailing" id="pSq-fU-5nI"/>
                             <constraint firstItem="GN8-Nb-v65" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sRe-tK-to1"/>
                             <constraint firstItem="6Qi-cP-8uH" firstAttribute="top" secondItem="J9U-vM-dqM" secondAttribute="bottom" constant="1" id="vca-9O-Vxj"/>
+                            <constraint firstItem="tZe-Hu-ADe" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zYN-lH-MNH"/>
                             <constraint firstItem="pT3-db-Y0q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="zbX-Gi-HnH"/>
                         </constraints>
                     </view>
@@ -123,6 +138,7 @@
                         <outletCollection property="playBtns" destination="6Qi-cP-8uH" id="PTn-An-Xch"/>
                         <outletCollection property="playBtns" destination="69g-dw-yn5" id="GXb-1k-Hue"/>
                         <outletCollection property="playBtns" destination="GN8-Nb-v65" id="ZiV-fH-CL4"/>
+                        <outletCollection property="playBtns" destination="tZe-Hu-ADe" id="iMd-ig-RXu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,6 +13,7 @@
 #import "AudioToolBox/AudioUnitPlayPCM.h"
 #import "AudioToolBox/AudioUnitConverter.h"
 #import "AudioToolBox/AudioUnitEXTConverter.h"
+#import "AudioToolBox/AudioUnitUseCMSampleBuffer.h"
 
 @interface ViewController ()
 {
@@ -26,7 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    players = @[[AudioUnitAUGraph defaultPlayer], [AudioUnitPlayPCM defaultPlayer], [AudioUnitConverter mp3], [AudioUnitConverter m4a], [AudioUnitConverter aac], [AudioUnitEXTConverter mp3]];
+    players = @[[AudioUnitAUGraph defaultPlayer], [AudioUnitPlayPCM defaultPlayer], [AudioUnitConverter mp3], [AudioUnitConverter m4a], [AudioUnitConverter aac], [AudioUnitEXTConverter mp3], [AudioUnitUseCMSampleBuffer defaultPlayer]];
     NSAssert(players.count == playBtns.count, @"功能按钮数组和功能类数组个数必须一样");
 }
 
